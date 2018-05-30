@@ -48,7 +48,7 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text style={{ textAlign: 'left', marginBottom: '1em' }}>
             <S type="italic" textColor="tertiary" fontFamily="secondary">
-              On Being a...
+              On Being a
             </S>{' '}
           </Text>
           <Heading size={2}>secondCareerDev</Heading>
@@ -140,6 +140,19 @@ export default class Presentation extends React.Component {
           <Heading size={3}>
             <S type="italic">...the best of all possible worlds...</S>
           </Heading>
+        </Slide>
+
+        <Slide>
+          <Text textColor="secondary">
+            My sincere hope is that this{' '}
+            <S type="italic" textFont="secondary" textColor="tertiary">
+              career change
+            </S>{' '}
+            you are undergoing leads to your{' '}
+            <S type="italic" textFont="secondary" textColor="tertiary">
+              best of all possible worlds
+            </S>
+          </Text>
         </Slide>
       </Deck>
     )
