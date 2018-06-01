@@ -41,7 +41,8 @@ const images = {
   tweet: require('./images/tweet.png')
 }
 
-const formatSrc = str => str.replace('/', '')
+const formatSrc = str =>
+  process.env.NODE_ENV !== 'production' ? str.replace('/', '') : str
 
 export default class Presentation extends React.Component {
   render() {
