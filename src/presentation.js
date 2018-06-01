@@ -9,7 +9,6 @@ import {
   Link,
   ListItem,
   List,
-  Quote,
   S,
   Slide,
   Text

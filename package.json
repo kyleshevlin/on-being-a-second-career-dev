@@ -7,6 +7,7 @@
     "react-dom": "^16.4.0",
     "spectacle-scripts": "2.0.0"
   },
+  "homepage": "https://kyleshevlin.github.io/on-being-a-sCD",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
