@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  Appear,
   BlockQuote,
   Cite,
   Deck,
@@ -23,7 +24,7 @@ const theme = createTheme(
     primary: '#1B2B34',
     secondary: '#5FB3B3',
     tertiary: '#EC5f67',
-    quartenary: '#C594C5'
+    quarternary: '#eee'
   },
   {
     primary: 'Hack',
@@ -36,7 +37,9 @@ const images = {
   annaAndMe: require('./images/anna-and-me.jpg'),
   bible: require('./images/bible.jpg'),
   golf: require('./images/golf.jpg'),
-  manyUniverses: require('./images/manyUniverses.jpg')
+  manyUniverses: require('./images/manyUniverses.jpg'),
+  sCD: require('./images/sCD.png'),
+  tweet: require('./images/tweet.png')
 }
 
 const formatSrc = str => str.replace('/', '')
@@ -79,6 +82,15 @@ export default class Presentation extends React.Component {
                 >
                   <S type="italic">Formidable</S>
                 </Link>
+                <Appear>
+                  <Text
+                    style={{ fontSize: '.85em', marginTop: '0.5em' }}
+                    textColor="quarternary"
+                    textFont="secondary"
+                  >
+                    <S type="italic">We're Hiring</S>
+                  </Text>
+                </Appear>
               </div>
               <div style={{ marginBottom: '1.5em' }}>
                 Host of the{' '}
@@ -108,6 +120,18 @@ export default class Presentation extends React.Component {
           <Heading size={3}>
             <S type="italic" textColor="tertiary" textFont="secondary">
               An anecdote...
+            </S>
+          </Heading>
+        </Slide>
+
+        <Slide>
+          <Image width={700} src={formatSrc(images.tweet)} />
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>
+            <S type="italic" textColor="tertiary" textFont="secondary">
+              Now the real anecdote...
             </S>
           </Heading>
         </Slide>
@@ -143,7 +167,117 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
-          <Text textColor="secondary">
+          <Heading size={3} textColor="tertiary">
+            <S type="italic" textFont="secondary">
+              The Podcast
+            </S>
+          </Heading>
+        </Slide>
+
+        <Slide bgColor="secondary">
+          <Image width={700} src={formatSrc(images.sCD)} />
+          <br />
+          <Link
+            textFont="secondary"
+            textColor="primary"
+            href="https://secondcareerdevs.com"
+          >
+            Second Career Devs Website
+          </Link>
+          <br />
+          <Link
+            textFont="secondary"
+            textColor="primary"
+            href="https://twitter.com/2ndCareerDevs"
+          >
+            @2ndCareerDevs
+          </Link>
+        </Slide>
+
+        <Slide>
+          <Heading textColor="secondary" size={3}>
+            <S textFont="secondary" type="italic">
+              You Have a Place Here
+            </S>
+          </Heading>
+        </Slide>
+
+        <Slide bgColor="tertiary">
+          <Heading textColor="quarternary" size={3}>
+            <S textFont="secondary" type="italic">
+              Find What Makes{' '}
+              <S type="underline" textFont="secondary">
+                <S type="italic">You</S>
+              </S>{' '}
+              Valuable
+            </S>
+          </Heading>
+        </Slide>
+
+        <Slide>
+          <Heading textColor="tertiary" size={3}>
+            Challenges Ahead
+          </Heading>
+          <List>
+            <Appear>
+              <ListItem>Identity</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Doubt</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Something</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Something</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Something</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+
+        <Slide bgColor="tertiary">
+          <Heading size={3} textColor="quarternary">
+            It's Always Something
+          </Heading>
+        </Slide>
+
+        <Slide bgColor="secondary">
+          <Heading size={3} textColor="quarternary">
+            <S type="italic" textFont="secondary">
+              Rewards Ahead
+            </S>
+          </Heading>
+          <List textColor="quarternary">
+            <Appear>
+              <ListItem>Dolla Dolla Bills, Y'all!</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>In Demand Market</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Something</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Something</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Something</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+
+        <Slide bgColor="tertiary">
+          <Heading size={3} textColor="quarternary">
+            It's Always Something
+          </Heading>
+        </Slide>
+
+        <Slide />
+
+        <Slide>
+          <BlockQuote textColor="secondary" style={{ fontSize: '1.5em' }}>
             My sincere hope is that this{' '}
             <S type="italic" textFont="secondary" textColor="tertiary">
               career change
@@ -152,7 +286,8 @@ export default class Presentation extends React.Component {
             <S type="italic" textFont="secondary" textColor="tertiary">
               best of all possible worlds
             </S>
-          </Text>
+            <Cite style={{ fontSize: '1.5em', textAlign: 'right' }}>Me</Cite>
+          </BlockQuote>
         </Slide>
       </Deck>
     )
